@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1001 &42047106
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &119704721 stripped
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &138267432 stripped
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &165103839
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &307360063 stripped
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1001 &317973851
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &378153748
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &491920617
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1 &588658372 stripped
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &623047135 stripped
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &638998665
@@ -1393,7 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &667651289 stripped
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &692309118
@@ -1585,12 +1585,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4.14
+  m_Intensity: 1.03
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1742,7 +1742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &719503840 stripped
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &724041743
@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &752966992 stripped
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1 &756457666 stripped
@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1001 &768616827
@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1001 &793670703
@@ -2176,7 +2176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &836443979 stripped
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1 &874981381
@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &885747877
@@ -2362,7 +2362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &937868859
@@ -2527,6 +2527,8 @@ GameObject:
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194233}
+  - component: {fileID: 963194232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2740,6 +2742,55 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
+--- !u!114 &963194232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 9f84357df32004df495184cdecaa1810, type: 2}
+--- !u!114 &963194233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &966526401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,7 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1001 &999063612
@@ -2946,7 +2997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1005930455 stripped
@@ -2967,7 +3018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1 &1023390663 stripped
@@ -2988,7 +3039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1028143805 stripped
@@ -3009,7 +3060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!114 &1028143810
@@ -3025,7 +3076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.1
   HML: 1
   p: 0
 --- !u!1 &1045734132 stripped
@@ -3046,7 +3097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &1060728189
@@ -3305,7 +3356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1 &1120973842 stripped
@@ -3326,7 +3377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1 &1165043423 stripped
@@ -3347,7 +3398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &1186767805
@@ -3524,7 +3575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1 &1308684349
@@ -3818,7 +3869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1363209248 stripped
@@ -3839,7 +3890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1378535806
@@ -3892,7 +3943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1569695644 stripped
@@ -3913,7 +3964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1 &1571262161 stripped
@@ -3934,7 +3985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1001 &1575795232
@@ -4493,7 +4544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1754960951 stripped
@@ -4514,7 +4565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1001 &1807200376
@@ -4609,7 +4660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 2
   p: 0
 --- !u!1001 &1841535969
@@ -4926,7 +4977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1879383113 stripped
@@ -4947,7 +4998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1897794683 stripped
@@ -4968,7 +5019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1 &1932601309 stripped
@@ -4989,7 +5040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1 &1962747306 stripped
@@ -5010,7 +5061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &1975227193 stripped
@@ -5031,7 +5082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1 &2003494376 stripped
@@ -5052,7 +5103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1001 &2007341509
@@ -5443,7 +5494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 1
   p: 0
 --- !u!1001 &2079783508
@@ -5604,7 +5655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1 &2126855171 stripped
@@ -5625,7 +5676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 963194229}
-  scalar: 1
+  scalar: 0.6
   HML: 0
   p: 0
 --- !u!1001 &2129434422

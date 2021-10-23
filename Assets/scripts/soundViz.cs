@@ -18,6 +18,9 @@ public class soundViz : MonoBehaviour
     public Material mm;
     public Material mh;
     public float colorScalar;
+    Color lowColor;
+    Color midColor;
+    Color highColor;
 
     public LineRenderer line;
     public float circleRadius;
@@ -39,7 +42,7 @@ public class soundViz : MonoBehaviour
         a = GetComponent<AudioSource>();
         string micName = Microphone.devices[0];
         a.clip = Microphone.Start(micName, true, 1, AudioSettings.outputSampleRate);
-        while(!(Microphone.GetPosition(micName) > 0)) { }
+        while (!(Microphone.GetPosition(micName) > 0)) { }
         a.Play();
         for (int i = 0; i < Microphone.devices.Length; i++)
         {
@@ -48,6 +51,9 @@ public class soundViz : MonoBehaviour
         Debug.Log(Microphone.devices);
         midMin = Mathf.FloorToInt(spectrum.Length * midMinF);
         maxMin = Mathf.FloorToInt(spectrum.Length * maxMinF);
+        ml.EnableKeyword("_EMISSION");
+        mm.EnableKeyword("_EMISSION");
+        mh.EnableKeyword("_EMISSION");
     }
 
     void Update()
@@ -81,9 +87,16 @@ public class soundViz : MonoBehaviour
         lowSum = Mathf.Clamp(lowSum * colorScalar, 0, 1);
         midSum = Mathf.Clamp(midSum * colorScalar, 0, 1);
         highSum = Mathf.Clamp(highSum * colorScalar, 0, 1);
-        ml.color = new Color(lowSum, 0, 0);
-        mm.color = new Color(0, midSum, 0);
-        mh.color = new Color(0, highSum, highSum);
+        lowColor = new Color(lowSum, 0, 0);
+        midColor = new Color(0, midSum, 0);
+        highColor = new Color(0, highSum, highSum);
+        ml.color = lowColor;
+        ml.SetColor("_EmissionColor", lowColor);
+        mm.color = midColor;
+        mm.SetColor("_EmissionColor", midColor);
+        mh.color = highColor;
+        mh.SetColor("_EmissionColor", highColor);
+        DynamicGI.UpdateEnvironment();
 
         float prev = wave(0);
         int index = 0;
