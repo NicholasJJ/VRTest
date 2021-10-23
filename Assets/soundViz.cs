@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class soundViz : MonoBehaviour
 {
     public float step;
     public float max;
@@ -37,7 +37,7 @@ public class test : MonoBehaviour
             line.SetPosition(i, xy);
         }
         a = GetComponent<AudioSource>();
-        string micName = Microphone.devices[1];
+        string micName = Microphone.devices[0];
         a.clip = Microphone.Start(micName, true, 1, AudioSettings.outputSampleRate);
         while(!(Microphone.GetPosition(micName) > 0)) { }
         a.Play();

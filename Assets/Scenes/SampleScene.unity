@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.9997447, g: 0.9997447, b: 0.9997447, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999946, g: 0.99999946, b: 0.99999946, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -530,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &223974227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2635,7 +2635,7 @@ AudioSource:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3c7153af32976dc4390cf841dea3e661, type: 2}
   m_audioClip: {fileID: 8300000, guid: 69ddfe4d7859379498a2f9a83283c43e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3024,9 +3024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c191493d86736f4cadba2b89382422a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: {fileID: 0}
-  scalar: 0
-  HML: 0
+  t: {fileID: 963194229}
+  scalar: 1
+  HML: 1
   p: 0
 --- !u!1 &1045734132 stripped
 GameObject:
@@ -5549,7 +5549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3562666264761007894, guid: 73601676fd76e85488b364704ea11fd0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.51
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 3562666264761007894, guid: 73601676fd76e85488b364704ea11fd0, type: 3}
       propertyPath: m_LocalRotation.w

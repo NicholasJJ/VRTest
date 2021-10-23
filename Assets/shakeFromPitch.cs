@@ -10,7 +10,7 @@ public class shakeFromPitch : MonoBehaviour
         Medium,
         Low
     }
-    public test t;
+    public soundViz t;
     public float scalar;
     public Pitch HML;
     Vector3 start;
