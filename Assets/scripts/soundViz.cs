@@ -40,7 +40,7 @@ public class soundViz : MonoBehaviour
             line.SetPosition(i, xy);
         }
         a = GetComponent<AudioSource>();
-        string micName = Microphone.devices[0];
+        string micName = Microphone.devices[1];
         a.clip = Microphone.Start(micName, true, 1, AudioSettings.outputSampleRate);
         while (!(Microphone.GetPosition(micName) > 0)) { }
         a.Play();
