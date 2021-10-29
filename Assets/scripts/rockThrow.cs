@@ -15,7 +15,7 @@ public class rockThrow : MonoBehaviour
     {
         punched = false;
         r = GetComponent<Rigidbody>();
-        player = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame

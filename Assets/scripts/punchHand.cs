@@ -7,6 +7,7 @@ public class punchHand : MonoBehaviour
     public OVRHand relatedHand;
     public bool rightHand;
     MeshRenderer r;
+    public MeshRenderer th;
     Collider col;
     // Start is called before the first frame update
     void Start()
@@ -22,24 +23,43 @@ public class punchHand : MonoBehaviour
         {
             r.enabled = false;
             col.enabled = false;
+            th.enabled = false;
+            relatedHand.tag = "hand";
         } else
         {
             r.enabled = true;
             col.enabled = true;
+            th.enabled = true;
         }
     }
     private void OnCollisionEnter(Collision collision)
+    {
+        startShake();
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        endShake();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        startShake();
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        endShake();
+    }
+    void startShake()
     {
         if (rightHand)
             OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
         else
             OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
     }
-    private void OnCollisionExit(Collision collision)
+    void endShake()
     {
         if (rightHand)
-            OVRInput.SetControllerVibration(0,0, OVRInput.Controller.RTouch);
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
         else
-            OVRInput.SetControllerVibration(0,0, OVRInput.Controller.LTouch);
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
     }
 }
