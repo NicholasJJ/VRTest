@@ -27,9 +27,19 @@ public class SummonRock : MonoBehaviour
     float lastLoud;
     bool lazored;
     float loudStart;
+
+    [SerializeField] float raiseThreshhold;
+    [SerializeField] Transform lhTracker;
+    [SerializeField] Transform rhTracker;
+    Transform lh;
+    Transform rh;
+    float beginTime;
     // Start is called before the first frame update
     void Start()
     {
+        beginTime = Time.time;
+        lh = GameObject.Find("LeftHandAnchor").transform;
+        rh = GameObject.Find("RightHandAnchor").transform;
         micName = Microphone.devices[1];
         a = Microphone.Start(micName, true, 1, AudioSettings.outputSampleRate);
         while (!(Microphone.GetPosition(micName) > 0)) { }
@@ -86,14 +96,21 @@ public class SummonRock : MonoBehaviour
         {
             unLazor();
         }
-        if (!isLoud && wasLoud && !lazored && peakVolume > bangThreshhold && Time.time > lastSummon + summonReload)
+        //if (!isLoud && wasLoud && !lazored && peakVolume > bangThreshhold && Time.time > lastSummon + summonReload)
+        //{
+        //    
+        //}
+        wasLoud = isLoud;
+
+
+        //hand tracking
+        if (lh.position.y - lhTracker.position.y > raiseThreshhold && rh.position.y - rhTracker.position.y > raiseThreshhold && Time.time > lastSummon + summonReload && Time.time > beginTime + 5)
         {
             //rock
             lastRockSummon = Time.time;
             lastSummon = Time.time;
             summon();
         }
-        wasLoud = isLoud;
     }
 
     void summon()
