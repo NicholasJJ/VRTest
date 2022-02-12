@@ -29,6 +29,7 @@ public class soundViz : MonoBehaviour
     AudioSource a;
     private void Start()
     {
+        //set up line renderer in a circle
         line.positionCount = Mathf.FloorToInt(max / step);
         for (int i = 0; i < line.positionCount; i++)
         {
@@ -39,6 +40,8 @@ public class soundViz : MonoBehaviour
             // circle currently centered at origin, if that needs to change do it here
             line.SetPosition(i, xy);
         }
+
+        //Set up audio source
         a = GetComponent<AudioSource>();
         string micName = Microphone.devices[1];
         a.clip = Microphone.Start(micName, true, 1, AudioSettings.outputSampleRate);
@@ -48,6 +51,8 @@ public class soundViz : MonoBehaviour
         {
             Debug.Log(i + "  " + Microphone.devices[i].ToString());
         }
+
+        //Set up box sound cutoffs
         Debug.Log(Microphone.devices);
         midMin = Mathf.FloorToInt(spectrum.Length * midMinF);
         maxMin = Mathf.FloorToInt(spectrum.Length * maxMinF);
@@ -97,6 +102,7 @@ public class soundViz : MonoBehaviour
         mh.color = highColor;
         mh.SetColor("_EmissionColor", highColor);
         DynamicGI.UpdateEnvironment();
+
 
         float prev = wave(0);
         int index = 0;
