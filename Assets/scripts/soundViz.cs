@@ -6,7 +6,7 @@ public class soundViz : MonoBehaviour
 {
     public float step;
     public float max;
-    float[] spectrum = new float[128];
+    public float[] spectrum = new float[128];
     public float midMinF;
     public float maxMinF;
     int midMin;
