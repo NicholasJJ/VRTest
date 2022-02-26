@@ -8,10 +8,20 @@ public class RecordAndLoop : MonoBehaviour, func
     [SerializeField] Material recordingMat;
     [SerializeField] Material playingMat;
     [SerializeField] AudioClip defaultClip;
+
+    [SerializeField] float[] data;
     public bool recording;
+
+    [SerializeField] private int shortStoreSamples;
+    private float shortStoreTime;
     private float recordStartTime;
     private void Start() {
         recording = false;
+    }
+
+    private void Update()
+    {
+
     }
 
     private void BeginRecord(){
@@ -19,11 +29,13 @@ public class RecordAndLoop : MonoBehaviour, func
     }
     private void EndRecord(){
         AudioClip recorded = micAudio.clip;
-        float timePassed = Time.time - recordStartTime;
-        int samplesInRecording = Mathf.FloorToInt(recorded.frequency * timePassed);
-        float[] data = new float[samplesInRecording * recorded.channels];
+        int samplesInRecording = Mathf.FloorToInt(recorded.frequency * (Time.time - recordStartTime));
+        data = new float[samplesInRecording * recorded.channels];
         recorded.GetData(data,recorded.samples - samplesInRecording);
-        AudioClip newSound = AudioClip.Create("new",samplesInRecording,recorded.channels,recorded.frequency,false,false);
+        float dSum = 0;
+        for (int i = 0; i < data.Length; i++) dSum += data[i];
+        Debug.Log("!!!!!!!!!!!!!! Data is = " + dSum + "    length: " + data.Length);
+        AudioClip newSound = AudioClip.Create("new", data.Length, recorded.channels, recorded.frequency, false);
         newSound.SetData(data,0);
 
 

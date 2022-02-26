@@ -43,13 +43,14 @@ public class soundViz : MonoBehaviour
 
         //Set up audio source
         a = GetComponent<AudioSource>();
-        string micName = Microphone.devices[1];
-        a.clip = Microphone.Start(micName, true, 1, AudioSettings.outputSampleRate);
+        //string micName = Microphone.devices[1];
+        string micName = Microphone.devices[0];
+        a.clip = Microphone.Start(micName, true, 10, AudioSettings.outputSampleRate);
         while (!(Microphone.GetPosition(micName) > 0)) { }
         a.Play();
         for (int i = 0; i < Microphone.devices.Length; i++)
         {
-            Debug.Log(i + "  " + Microphone.devices[i].ToString());
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!" + i + "  " + Microphone.devices[i].ToString());
         }
 
         //Set up box sound cutoffs
