@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea70fa1285bc46638e032dd0c2b3959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aList: {fileID: 11400000, guid: a9d2f62a7cde2479d86433d1c195d9f3, type: 2}
   sv: {fileID: 472501176}
   micAudio: {fileID: 7787061654263400285}
   recordingMat: {fileID: 2100000, guid: b82fdbdc8baea9b43b5de6e082f941a9, type: 2}
@@ -5860,6 +5861,10 @@ PrefabInstance:
       propertyPath: line
       value: 
       objectReference: {fileID: 1308684350}
+    - target: {fileID: 7787061654730460388, guid: 020f64265c0cc475f8f75236b9569bcb, type: 3}
+      propertyPath: aList
+      value: 
+      objectReference: {fileID: 11400000, guid: a9d2f62a7cde2479d86433d1c195d9f3, type: 2}
     - target: {fileID: 7787061654730460388, guid: 020f64265c0cc475f8f75236b9569bcb, type: 3}
       propertyPath: shortRecordSeconds
       value: 60

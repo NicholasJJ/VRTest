@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class soundViz : MonoBehaviour
 {
+    [SerializeField] AudioSourceLister aList;
     public float step;
     public float max;
     public float[] spectrum = new float[128];
@@ -31,8 +32,11 @@ public class soundViz : MonoBehaviour
     public float micStart;
 
     public int shortRecordSeconds;
+
+    
     private void Start()
     {
+        aList.resetSounds();
         micStart = Time.time;
         //set up line renderer in a circle
         line.positionCount = Mathf.FloorToInt(max / step);
@@ -58,7 +62,7 @@ public class soundViz : MonoBehaviour
         {
             Debug.Log("!!!!!!!!!!!!!!!!!!!!" + i + "  " + Microphone.devices[i].ToString());
         }
-
+        aList.AddSoundMaker(a);
         //Set up box sound cutoffs
         Debug.Log(Microphone.devices);
         midMin = Mathf.FloorToInt(spectrum.Length * midMinF);
@@ -68,12 +72,20 @@ public class soundViz : MonoBehaviour
         mh.EnableKeyword("_EMISSION");
     }
 
-    void Update()
+    async void Update()
     {
         
-
-        //AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
-        a.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+        spectrum = new float[128];
+        foreach (AudioSource s in aList.GetSoundMakers()) {
+            float[] n = new float[128];
+            s.GetSpectrumData(n, 0, FFTWindow.Rectangular);
+            for (int i = 0; i < 128; i++) spectrum[i] += n[i];
+        }
+        foreach (AudioSource s in aList.GetLoopingSounds()) {
+            float[] n = new float[128];
+            s.GetSpectrumData(n, 0, FFTWindow.Rectangular);
+            for (int i = 0; i < 128; i++) spectrum[i] += n[i];
+        }
         lowSum = 0;
         midSum = 0;
         highSum = 0;

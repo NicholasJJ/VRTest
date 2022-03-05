@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RecordAndLoop : MonoBehaviour, func
 {
+    [SerializeField] AudioSourceLister aList;
     [SerializeField] soundViz sv;
     [SerializeField] AudioSource micAudio;
     [SerializeField] Material recordingMat;
@@ -68,6 +69,7 @@ public class RecordAndLoop : MonoBehaviour, func
         // a.clip = defaultClip;
         a.loop = true;
         a.Play();
+        aList.AddLoopingSound(a);
     }
     public void run(){
         recording = !recording;
