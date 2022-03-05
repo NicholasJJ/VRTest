@@ -27,8 +27,13 @@ public class soundViz : MonoBehaviour
     public float waveScalar;
     public float waveShift;
     AudioSource a;
+
+    public float micStart;
+
+    public int shortRecordSeconds;
     private void Start()
     {
+        micStart = Time.time;
         //set up line renderer in a circle
         line.positionCount = Mathf.FloorToInt(max / step);
         for (int i = 0; i < line.positionCount; i++)
@@ -43,11 +48,12 @@ public class soundViz : MonoBehaviour
 
         //Set up audio source
         a = GetComponent<AudioSource>();
-        //string micName = Microphone.devices[1];
+        // string micName = Microphone.devices[1];
         string micName = Microphone.devices[0];
-        a.clip = Microphone.Start(micName, true, 10, AudioSettings.outputSampleRate);
+        a.clip = Microphone.Start(micName, true, shortRecordSeconds, AudioSettings.outputSampleRate);
         while (!(Microphone.GetPosition(micName) > 0)) { }
         a.Play();
+        micStart = Time.time;
         for (int i = 0; i < Microphone.devices.Length; i++)
         {
             Debug.Log("!!!!!!!!!!!!!!!!!!!!" + i + "  " + Microphone.devices[i].ToString());
@@ -64,7 +70,7 @@ public class soundViz : MonoBehaviour
 
     void Update()
     {
-
+        
 
         //AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
         a.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);

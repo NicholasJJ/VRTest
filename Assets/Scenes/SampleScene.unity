@@ -326,11 +326,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea70fa1285bc46638e032dd0c2b3959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sv: {fileID: 472501176}
   micAudio: {fileID: 7787061654263400285}
   recordingMat: {fileID: 2100000, guid: b82fdbdc8baea9b43b5de6e082f941a9, type: 2}
   playingMat: {fileID: 2100000, guid: 46d4060a76288d549bc37ff33e0b3b63, type: 2}
   defaultClip: {fileID: 8300000, guid: 69ddfe4d7859379498a2f9a83283c43e, type: 3}
+  data: []
   recording: 0
+  shortStoreSamples: 0
+  sums: []
 --- !u!1 &119704721 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6727391261644256138, guid: 385544710679b0846af15c972297432d, type: 3}
@@ -5856,10 +5860,14 @@ PrefabInstance:
       propertyPath: line
       value: 
       objectReference: {fileID: 1308684350}
+    - target: {fileID: 7787061654730460388, guid: 020f64265c0cc475f8f75236b9569bcb, type: 3}
+      propertyPath: shortRecordSeconds
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7787061654730460394, guid: 020f64265c0cc475f8f75236b9569bcb, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 24300002, guid: 3c7153af32976dc4390cf841dea3e661, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 020f64265c0cc475f8f75236b9569bcb, type: 3}
 --- !u!82 &7787061654263400285 stripped

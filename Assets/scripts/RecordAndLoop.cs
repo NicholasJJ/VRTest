@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RecordAndLoop : MonoBehaviour, func
 {
+    [SerializeField] soundViz sv;
     [SerializeField] AudioSource micAudio;
     [SerializeField] Material recordingMat;
     [SerializeField] Material playingMat;
@@ -14,29 +15,52 @@ public class RecordAndLoop : MonoBehaviour, func
 
     [SerializeField] private int shortStoreSamples;
     private float shortStoreTime;
-    private float recordStartTime;
+    private int recordStartSample;
+    private int recordEndSample;
+
+    [SerializeField] float[] sums;
     private void Start() {
         recording = false;
     }
 
-    private void Update()
+    private async void Update()
     {
-
+        // AudioClip recorded = micAudio.clip;
+        // int samplesInRecording = recorded.samples;
+        // data = new float[samplesInRecording];
+        // recorded.GetData(data,0);
+        // sums = new float [4];
+        // for (int i = 0; i < data.Length-1; i++) {
+        //     int bin = Mathf.FloorToInt(i*4/data.Length);
+        //     sums[bin] += data[i];
+        // }
     }
 
     private void BeginRecord(){
-        recordStartTime = Time.time;
-    }
-    private void EndRecord(){
         AudioClip recorded = micAudio.clip;
-        int samplesInRecording = Mathf.FloorToInt(recorded.frequency * (Time.time - recordStartTime));
-        data = new float[samplesInRecording * recorded.channels];
-        recorded.GetData(data,recorded.samples - samplesInRecording);
+        recordStartSample = Mathf.FloorToInt((Time.time + sv.micStart + 2f) * recorded.frequency);
+        recordStartSample = recordStartSample%(recorded.frequency * sv.shortRecordSeconds);
+    }
+    private async void EndRecord(){
+        AudioClip recorded = micAudio.clip;
+        recordEndSample = Mathf.FloorToInt((Time.time + sv.micStart + 2f) * recorded.frequency);
+        recordEndSample = recordEndSample%(recorded.frequency * sv.shortRecordSeconds);
+        data = new float[recorded.samples * recorded.channels];
+        recorded.GetData(data,0);
         float dSum = 0;
         for (int i = 0; i < data.Length; i++) dSum += data[i];
         Debug.Log("!!!!!!!!!!!!!! Data is = " + dSum + "    length: " + data.Length);
-        AudioClip newSound = AudioClip.Create("new", data.Length, recorded.channels, recorded.frequency, false);
-        newSound.SetData(data,0);
+        
+        int clipSamples = recordEndSample - recordStartSample;
+        if (clipSamples < 0) clipSamples = (data.Length - recordStartSample) + recordEndSample;
+        Debug.Log("Clip is " + clipSamples + " long, from " + recordStartSample + " to " + recordEndSample);
+        float[] clip = new float[clipSamples];
+        for (int i  = 0; i < clipSamples; i++) {
+            clip[i] = data[(recordStartSample + i)%data.Length];
+        }
+
+        AudioClip newSound = AudioClip.Create("new", clip.Length, recorded.channels, recorded.frequency, false);
+        newSound.SetData(clip,0);
 
 
         AudioSource a = gameObject.AddComponent<AudioSource>();
@@ -47,6 +71,7 @@ public class RecordAndLoop : MonoBehaviour, func
     }
     public void run(){
         recording = !recording;
+        Debug.Log("Recording changed to " + recording);
         if (recording) {
             BeginRecord();
             GetComponent<Renderer>().material = recordingMat;
