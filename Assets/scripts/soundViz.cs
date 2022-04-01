@@ -86,6 +86,7 @@ public class soundViz : MonoBehaviour
             s.GetSpectrumData(n, 0, FFTWindow.Rectangular);
             for (int i = 0; i < 128; i++) spectrum[i] += n[i];
         }
+
         lowSum = 0;
         midSum = 0;
         highSum = 0;
