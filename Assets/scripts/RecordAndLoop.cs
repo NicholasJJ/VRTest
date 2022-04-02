@@ -24,6 +24,11 @@ public class RecordAndLoop : MonoBehaviour, func
         recording = false;
     }
 
+    private List<AudioClip> instrumentClips;
+    private List<float> instrumentTimes;
+
+
+    private float clipStartTime;
     private async void Update()
     {
         // AudioClip recorded = micAudio.clip;
@@ -38,11 +43,16 @@ public class RecordAndLoop : MonoBehaviour, func
     }
 
     private void BeginRecord(){
+        clipStartTime = Time.time;
         AudioClip recorded = micAudio.clip;
         recordStartSample = Mathf.FloorToInt((Time.time + sv.micStart + 2f) * recorded.frequency);
         recordStartSample = recordStartSample%(recorded.frequency * sv.shortRecordSeconds);
+        instrumentClips = new List<AudioClip>();
+        instrumentTimes = new List<float>();
     }
     private async void EndRecord(){
+
+        //voice clip generation
         AudioClip recorded = micAudio.clip;
         recordEndSample = Mathf.FloorToInt((Time.time + sv.micStart + 2f) * recorded.frequency);
         recordEndSample = recordEndSample%(recorded.frequency * sv.shortRecordSeconds);
@@ -59,6 +69,19 @@ public class RecordAndLoop : MonoBehaviour, func
         for (int i  = 0; i < clipSamples; i++) {
             clip[i] = data[(recordStartSample + i)%data.Length];
         }
+
+        //instrument clip
+        // for (int i = 0; i < instrumentClips.Count; i++) {
+        //     AudioClip ic = instrumentClips[i];
+        //     float it = instrumentTimes[i];
+        //     float[] iData = new float[ic.samples];
+        //     ic.GetData(iData,0);
+
+        //     int startI = instrumentTimes[i];
+        //     for (int j = 0; j < iData.Length; j++) {
+        //         clip
+        //     }
+        // }
 
         AudioClip newSound = AudioClip.Create("new", clip.Length, recorded.channels, recorded.frequency, false);
         newSound.SetData(clip,0);
@@ -82,4 +105,11 @@ public class RecordAndLoop : MonoBehaviour, func
             GetComponent<Renderer>().material = playingMat;
         }
     }
+
+    public void recordClip(AudioClip c) {
+        if (!recording) return;
+        instrumentClips.Add(c);
+        instrumentTimes.Add(Time.time);
+    }
 }
+

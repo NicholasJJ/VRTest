@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 880260054278454746}
   - component: {fileID: 880260054278454745}
   - component: {fileID: -5980455918372370214}
+  - component: {fileID: 9101592928534375891}
   m_Layer: 0
   m_Name: Chime
   m_TagString: Chime
@@ -210,3 +211,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9101592928534375891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880260054278454744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40ab1e38f76a42f0a969b8900024eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asl: {fileID: 11400000, guid: a9d2f62a7cde2479d86433d1c195d9f3, type: 2}
